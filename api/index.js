@@ -79,7 +79,7 @@ app.post('/submit', async (req, res) => {
 
     const videos = playlistItems.data.items;
     const durations = [];
-    let count = 0; // Initialize count variable
+    let count = 0;
 
     for (const video of videos) {
       count++;
@@ -95,7 +95,7 @@ app.post('/submit', async (req, res) => {
     }
 
     const totalDuration = calculateTotalDuration(durations);
-    res.json({ totalDuration, count }); // Include count in the response JSON
+    res.json({ totalDuration, count });
   } catch (error) {
     console.error("Error fetching video details:", error);
     res.status(500).json({ error: 'Error fetching video details' });

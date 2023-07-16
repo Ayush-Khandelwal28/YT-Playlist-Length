@@ -37,7 +37,7 @@ function IndexPage() {
         ev.preventDefault();
         if (isValid(playlist)) {
             try {
-                const response = await fetch("http://localhost:4000/submit", {
+                const response = await fetch("https://yt-playlist-length-ii7v.onrender.com/submit", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -63,6 +63,7 @@ function IndexPage() {
         <div className="index">
             <form onSubmit={submit}>
                 <p>Paste the link of the Playlist in the box</p>
+                <p className="limit">(Maximum Videos 50)</p>
                 <input
                     type="text"
                     placeholder="YT Playlist Link"

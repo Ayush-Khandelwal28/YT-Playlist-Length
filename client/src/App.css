@@ -47,6 +47,11 @@ html, body {
   width: 40px;
 }
 
+.limit{
+  padding-top: 0;
+  margin-top: -10px;
+}
+
 .header nav {
   margin-right: 100px;
   width: 10%;
@@ -121,3 +126,31 @@ form {
   align-items: center;
   flex-direction: column;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .AppName {
+    margin-left: 20px;
+  }
+
+  .header nav {
+    margin-right: 20px;
+  }
+  
+  .result {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  input {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
