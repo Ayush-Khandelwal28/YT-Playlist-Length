@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function HeaderPage() {
 
-    const [mode, setMode] = useState("light");
+    const [mode, setMode] = useState("dark");
 
     useEffect(() => {
         document.documentElement.setAttribute("data-mode", mode);
@@ -15,9 +15,9 @@ function HeaderPage() {
 
     return (
         <div className="header">
-            <div className="AppName">YT-PlayList Length Finder</div>
+            <div className="AppName">YT-PlayList Length Calculator</div>
             <nav>
-                <div className="Mode" onClick={toggleMode}>
+                <div className="Mode" onClick={toggleMode} style={{ cursor: "pointer" }}>
                     {mode === "light" ? (
                         <img
                             src="https://cdn-icons-png.flaticon.com/128/4489/4489231.png"
